@@ -1,0 +1,39 @@
+{
+  "name": "crazy-cow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -p 8080",
+    "build": "parcel build index.html",
+    "test": "echo \"passed the tests\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/auth0-js": "^8.11.7",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-router": "^4.4.1",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/styled-components": "^4.1.1",
+    "auth0-js": "^9.8.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "date-fns": "^2.0.0-alpha.25",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.11.0",
+    "polished": "^2.3.0",
+    "react": "^16.8.1",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-dom": "^16.8.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "styled-components": "^4.1.1",
+    "typescript": "^3.1.6"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.8"
+  }
+}

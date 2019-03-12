@@ -1,0 +1,40 @@
+version: "3.4"
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    restart: always
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - db
+      - backend
+      - registry
+
+  backend:
+    image: postgrest/postgrest
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      PGRST_DB_URI: postgres://crazycow:password@db:5432/crazycow
+      PGRST_DB_SCHEMA: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_JWT_SECRET: "@/usr/var/pgrst-key/rsa.jwk.pub"
+      PGRST_ROLE_CLAIM_KEY: ."http://role.claim/role"
+    volumes:
+      - ./pgrst-key:/usr/var/pgrst-key
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: crazycow
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
