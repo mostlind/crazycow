@@ -1,5 +1,5 @@
-import authConfig from "../auth.config";
-import * as Auth from "./auth/auth"
+import authConfig from "./auth.config";
+import * as Auth from "./auth/auth";
 import { Api } from "./api/Api";
 import { renderApp } from "./App";
 
