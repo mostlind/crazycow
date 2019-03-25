@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html -p 8080",
-    "build": "parcel build index.html",
+    "start": "parcel src/index.html -p 8080",
+    "build": "parcel build src/index.html",
     "test": "echo \"passed the tests\""
   },
   "author": "",
