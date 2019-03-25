@@ -2,12 +2,11 @@ node_modules/
 mock-data/
 .cache
 pgrst-key/
-*.config.ts
 postgrest.conf
 dist/
 nginx-ssl.conf
-auth.config.ts.prod
 docker-compose-with-secrets.yml
 postgres-data/
 registry-data/
 ci/docker-compose.yaml
+sql-bootstrap/
