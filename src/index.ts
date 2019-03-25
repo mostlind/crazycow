@@ -3,6 +3,10 @@ import * as Auth from "./auth/auth";
 import { Api } from "./api/Api";
 import { renderApp } from "./App";
 
+if (process.env.BACKEND_URL === undefined) {
+  throw new Error("must provide backendUrl as environment variable");
+}
+
 const auth = Auth.init(authConfig);
 
 async function main(): Promise<void> {
@@ -17,7 +21,7 @@ async function main(): Promise<void> {
   }
 
   const api = Api.init({
-    baseUrl: window.location.origin + "/api/",
+    baseUrl: process.env.BACKEND_URL!,
     idToken: auth.idToken!
   });
 

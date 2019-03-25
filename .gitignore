@@ -10,3 +10,4 @@ postgres-data/
 registry-data/
 ci/docker-compose.yaml
 sql-bootstrap/
+.env
