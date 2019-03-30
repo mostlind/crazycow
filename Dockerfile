@@ -14,7 +14,16 @@ WORKDIR /usr/var/app
 
 COPY . .
 
-## Build the angular app in production mode and store the artifacts in dist folder
+ARG REDIRECT_URL
+ARG AUTH0_CLIENT_ID
+ARG AUTH0_DOMAIN
+ARG BACKEND_URL
+
+ENV REDIRECT_URL=$REDIRECT_URL
+ENV AUTH0_CLIENT_ID=$AUTH0_CLIENT_ID
+ENV AUTH0_DOMAIN=$AUTH0_DOMAIN
+ENV BACKEND_URL=$BACKEND_URL
+
 
 RUN npx parcel build ./index.html
 
