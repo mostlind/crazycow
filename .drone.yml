@@ -6,7 +6,7 @@ steps:
     image: plugins/docker
     settings:
       repo: registry.crazycow.ninja/crazycow
-      autotag: true
+      auto_tag: true
       registry: registry.crazycow.ninja
       username:
         from_secret: registry-user
