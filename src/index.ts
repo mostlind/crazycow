@@ -9,8 +9,6 @@ if (process.env.BACKEND_URL === undefined) {
 
 const auth = Auth.init(authConfig);
 
-console.log("this worked");
-
 async function main(): Promise<void> {
   if (window.location.pathname.startsWith("/callback")) {
     await auth.handleAuth();
