@@ -5,7 +5,7 @@ steps:
   - name: docker
     image: plugins/docker
     settings:
-      repo: registry.crazycow.ninja/test-app
+      repo: registry.crazycow.ninja/crazycow
       tags: 1
       registry: registry.crazycow.ninja
       username:
