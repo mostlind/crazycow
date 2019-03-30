@@ -25,7 +25,7 @@ ENV AUTH0_DOMAIN=$AUTH0_DOMAIN
 ENV BACKEND_URL=$BACKEND_URL
 
 
-RUN npx parcel build ./index.html
+RUN npm run build
 
 
 ### STAGE 2: Setup ###
