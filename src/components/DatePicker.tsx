@@ -64,6 +64,7 @@ const DoneButton = styled.button`
   color: ${colors.white};
   padding: ${unit(1)};
   width: 100%;
+  font-size: ${fontSizes.small};
   cursor: pointer;
 `;
 
