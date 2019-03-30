@@ -18,7 +18,5 @@ steps:
         - AUTH0_DOMAIN=mostlind.auth0.com
         - BACKEND_URL=https://api.crazycow.ninja/
     when:
-      branch:
-        - master
       event:
         - tag
