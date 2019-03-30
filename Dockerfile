@@ -33,7 +33,7 @@ RUN npm run build
 FROM nginx:1.14.1-alpine
 
 ## get nginx conf from underlying server
-VOLUME [ "/etc/nginx/conf.d"]
+copy nginx/nginx.conf /etc/nginx/nginx.conf
 
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /usr/var/app/dist /var/www/html
