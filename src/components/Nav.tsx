@@ -7,6 +7,6 @@ export const Nav = styled.div`
   display: flex;
   justify-content: center;
   position: fixed;
-  top: calc(100vh - ${navHeight});
+  bottom: 0;
   box-shadow: ${shadow.nav};
 `;
